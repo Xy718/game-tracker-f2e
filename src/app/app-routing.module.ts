@@ -4,10 +4,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', component: R6TrackerComponent },
+  { path: '', redirectTo: '/r6', pathMatch: 'full' },
   { path: 'r6', component: R6TrackerComponent },
   { path: 'about', component: AboutUsComponent },
-  { path: '**', component: AboutUsComponent },
+  { path: '**', redirectTo: '/about', pathMatch: 'full'},
 ];
 
 @NgModule({
